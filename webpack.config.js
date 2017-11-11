@@ -19,6 +19,7 @@ module.exports = {
     devServer: {
         host: '0.0.0.0',
         disableHostCheck: true,
+        historyApiFallback: true, /* tells the server that the client API will worry about the routing. If you do not recognize it - send it to index.html */
         publicPath: "/public/"
     },
     module: { /* it uses some kind of rule on your code */
