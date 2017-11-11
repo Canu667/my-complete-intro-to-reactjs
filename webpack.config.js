@@ -16,8 +16,19 @@ module.exports = {
         reasons: true,
         chunks: true
     },
+    devServer: {
+        host: '0.0.0.0',
+        disableHostCheck: true,
+        publicPath: "/public/"
+    },
     module: { /* it uses some kind of rule on your code */
         rules: [
+            {
+                enforce: 'pre', /* ensures that it runs before babel */
+                test: /\.jsx?$/,
+                loader: 'eslint-loader',
+                exclude: /node_modules/
+            },
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader'
