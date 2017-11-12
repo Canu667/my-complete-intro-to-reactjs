@@ -22,7 +22,12 @@ class Search extends Component {
                 />
               </header>
               <div>
-                  {preload.shows.map(show => <ShowCard show={show} key={show.imdbID} />)}
+                  {preload.shows
+                      .filter(
+                          show =>
+                          `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0
+                      )
+                      .map(show => <ShowCard show={show} key={show.imdbID} />)}
               </div>
             </div>
         );
