@@ -19,7 +19,7 @@
   },
   "env": {
     "es6": true,
-    "jest": true,
+    "jest": true, /* so that ES lint understands we are using jest */
     "browser": true,
     "node": true
   },
