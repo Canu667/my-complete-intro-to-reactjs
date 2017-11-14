@@ -11,7 +11,7 @@
     "test": "NODE_ENV=test jest",
     "test:update": "NODE_ENV=test jest -u"
   },
-  "jest": {
+  "jest": { /* we add this to enable Enzyme */
     "snapshotSerializers": [
       "jest-serializer-enzyme"
     ]
