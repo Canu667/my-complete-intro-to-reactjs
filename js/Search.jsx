@@ -18,7 +18,7 @@ class Search extends Component {
                     onChange={this.handleSearchTermChange}
                     value={this.state.searchTerm}
                     type="text"
-                    placeholder="Search"
+                    placeholder="MySearch"
                 />
               </header>
               <div>
