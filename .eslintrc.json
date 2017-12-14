@@ -1,6 +1,6 @@
 {
   "extends": [
-    "plugin:flowtype/recommended",
+    "plugin:flowtype/recommended", /* Added for flow */
     "airbnb",
     "prettier",
     "prettier/react"
