@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import ShowCard from './ShowCard';
+import Header from './Header';
 
 class Search extends Component {
     state = {
@@ -16,15 +17,11 @@ class Search extends Component {
     render() {
         return (
             <div className="search">
-              <header>
-                <h1>{this.state.searchTerm}</h1>
-                <input
-                    onChange={this.handleSearchTermChange}
-                    value={this.state.searchTerm}
-                    type="text"
-                    placeholder="MySearch"
+                <Header
+                    handleSearchTermChange={this.handleSearchTermChange}
+                    showSearch
+                    searchTerm={this.state.searchTerm}
                 />
-              </header>
               <div>
                   {this.props.shows
                       .filter(
